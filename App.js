@@ -19,15 +19,15 @@ export default function App() {
   
   return (
     <View style={styles.container}>
-      <View>
+      <View style={{marginBottom: 15}}>
         <Text style={{textAlign: "center"}}>Result: {result}</Text>
         <TextInput style={{width:200, borderColor: 'gray', borderWidth:1}}  keyboardType = 'numeric' onChangeText={number1 => setNumber1(number1)}  value={number1}/>
         <TextInput style={{width:200, borderColor: 'gray', borderWidth:1}}  keyboardType = 'numeric' onChangeText={number2 => setNumber2(number2)}  value={number2}/>
       </View>
       
       <View style={{flexDirection: "row"}}>
-        <Button style={styles.button} title="+" onPress={addition} />
-        <Button style={styles.button} title='-' onPress={subtraction} />
+        <Button title="+" onPress={addition} />
+        <Button title='-' onPress={subtraction} />
       </View>
     </View>
   );
@@ -39,10 +39,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  button: {
-    marginTop: 8,
-    marginHorizontal: 10,
-    alignItems: "center"
-  },
+  }
   });
